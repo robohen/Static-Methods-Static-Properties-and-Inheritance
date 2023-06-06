@@ -21,51 +21,51 @@
 // // governor.vetoBill("Infrastructure bill");
 // // governor.signBill("Healthcare bill");
 class Person{
-    constructor (sex, hair, eyes) {
-        this.sex= sex;
+    constructor (name, hair, eyes) {
+        this.name= name;
         this.hair=hair;
         this.eyes=eyes;
     }
     intro(){
-        console.log(`hi my name is ${this.name}.`);
+        return(`hi my name is ${this.name}.`);
     }
     hColor(){
-        console.log(`my hair color is ${this.hair}.`);
+        return(`my hair color is ${this.hair}.`);
     }
     eColor(){
-        console.log(`my eyes color is ${this.eyes}.`);
+        return(`my eyes color is ${this.eyes}.`);
     }
 }
 // class PostalWorker extends Person {
-//     constructor(shift, hours, packages){
-//         super("male", "black", "brown");
+//     constructor(name,shift, hours, packages){
+//         super(name, "black", "brown");
 //         this.shift=shift;
 //         this.hours=hours;
 //         this.packages=packages;
 //     }
 //     intro1(){
-//         console.log(` hi I work ${this.shift}, for this many hours: ${this.hours} and deliver this many packages: ${this.packages}.`);
+//         return (` hi I am ${this.name}, I work ${this.shift} shift, for this many hours: ${this.hours}, and I'll deliver this many packages today: ${this.packages}.`);
 //     }
 // }
-// // let John = new PostalWorker("morning", 8, 12);
-// let Max = new PostalWorker("afternoon", 4, 16);
-// // console.log(John);
-// Max.intro1();
+// // // let John = new PostalWorker("John","morning", 8, 12);
+// // let Max = new PostalWorker("Max","afternoon", 4, 16);
+// // // console.log(John);
+// console.log(Max.intro1());
 class Chef extends Person {
-    constructor(shift, specialty, favDish){
-        super("female", "brown", "brown");
+    constructor(name, shift, specialty, favDish){
+        super(name, "brown", "brown");
         this.shift = shift;
         this.specialty = specialty;
         this.favDish = favDish;
     }
     cook(){
-    console.log(` I work ${this.shift} shift this is my specialty, ${this.specialty} and ${this.favDish} is my favorite dish to make!`);
+    return(` I work ${this.shift} shift, this is my specialty: ${this.specialty}, and ${this.favDish} is my favorite dish to make!`);
     }
 }
-let Leya = new Chef("morning", "Indian cuisine", "Flan");
-let Rei = new Chef("night", "Mexican cuisine", "Japanese Curry");
-console.log(Leya);
-Rei.cook();
+let Leya = new Chef("Leya","morning", "Indian cuisine", "Flan");
+let Rei = new Chef("Rei","night", "Mexican cuisine", "Japanese Curry");
+console.log(Leya.cook());
+console.log(Rei.cook());
 // class BankAccount {
 
 // }
